@@ -7,30 +7,153 @@ body {
    font-family: 'Spartan', sans-serif;
    font-size: 15px;
    background-color: hsl(0, 10%, 100%);
+   padding: 0;
+   margin: 0;
+   background-image: url(/assets/images/bg-pattern-top-desktop.svg);
+   background-repeat: no-repeat;
+   background-position: top 0 left 0;
 }
 
 * {
    box-sizing: border-box;
 }
 
+/*---------------------------------------------------------
+Main social section
+-----------------------------------------------------------*/
 .social-container {
+   background-image: url(/assets/images/bg-pattern-bottom-desktop.svg);
+   background-repeat: no-repeat;
+   background-position: bottom 0 right 0;
    width: 100%;
    display: grid;
    grid-template-columns: 1fr;
    row-gap: 30px;
+   padding: 100px;
 }
 
-.social-upper-col{
-   background-image: url(/assets/images/bg-pattern-top-desktop.svg);
-   background-repeat: no-repeat;
-   background-position: top 0 left 0;
+.social-upper-col {
    display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 10px;
+}
+
+.left-upper-col-item {
+   margin: 10px 90px 50px 30px;
+}
+
+.social-head {
+   color: hsl(300, 43%, 22%);
+   font-weight: 700;
+   font-size: 3em;
+}
+
+.p-social {
+   color: hsl(303, 10%, 53%);
+   margin-top: -30px;
+}
+
+.right-upper-col-item {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: start;
+   align-content: center;
+   align-items: center;
+}
+
+.right-item-list {
+   background-color: hsl(300, 24%, 96%);
+   width: 80%;
+   padding: 15px;
+   margin-bottom: 20px;
+   border-radius: 5px;
+   display: flex;
+   flex-flow: row nowrap;
+   align-content: center;
+   align-items: center;
+}
+
+.customer-rate {
+   margin-right: 10px;
+   display: flex;
+   flex-flow: row nowrap;
+   align-content: center;
+}
+
+.rate-star-img {
+   margin-right: 5px;
+}
+
+.rate-head {
+   font-size: 12px;
+   text-transform: capitalize;
+}
+
+.rate-h-span {
+   text-transform: none;
+}
+
+.l-t-2 {
+   margin-left: 100px;
+}
+
+.l-t-3 {
+   margin-left: 190px;
+}
+
+@media screen and (max-width: 600px) {
+   .social-container {
+      padding: 20px;
+   }
+
+   .social-upper-col {
+      grid-template-columns: 1fr;
+   }
+
+   .left-upper-col-item {
+      grid-column: 1;
+   }
+
+   .social-head {
+      align-self: center;
+      text-align: center;
+      font-size: 2.2em;
+      margin: 140px 0 0 0;
+      padding: 20px;
+   }
+
+   .p-social {
+      margin: 10px 10px;
+      text-align: center;
+
+   }
+
+   .left-upper-col-item {
+      margin: 0;
+   }
+
+   .right-upper-col-item {
+      grid-column: 1;
+   }
+
+   .right-item-list {
+      flex-flow: column nowrap;
+   }
+
+   .l-t-2 {
+      margin-left: 0;
+   }
+
+   .l-t-3 {
+      margin-left: 0;
+   }
 }
 
 /*----------------------------------------------------
 customer review
 ------------------------------------------------------*/
-.customer-review{
+.customer-review {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: 1fr;
@@ -38,13 +161,13 @@ customer review
    margin: 50px;
 }
 
-.t-card{
+.t-card {
    background-color: hsl(300, 43%, 22%);
    padding: 20px;
    border-radius: 5px;
 }
 
-.card-header{
+.card-header {
    display: flex;
    flex-direction: row;
    flex-wrap: nowrap;
@@ -52,41 +175,60 @@ customer review
    align-content: center;
 }
 
-.customer-profile-pic{
+.customer-profile-pic {
    border-radius: 50%;
    margin-right: 20px;
    height: 60px;
 }
 
-.customer-detail > h3{
+.customer-detail>h3 {
    color: hsl(0, 0%, 100%);
    text-transform: capitalize;
    font-family: 'Spartan', sans-serif;
    font-size: 15px;
 }
 
-.customer-detail > p{
+.customer-detail>p {
    color: hsl(303, 10%, 53%);
    text-transform: capitalize;
    font-family: 'Spartan', sans-serif;
    margin-top: -10px;
 }
 
-.customer-comment{
+.customer-comment {
    color: hsl(0, 0%, 100%);
    font-family: 'Spartan', sans-serif;
    font-size: 15px;
    line-height: 1.5;
 }
 
-.card-1{
-   margin-bottom: 20px;
+.card-1 {
+   margin-bottom: 90px;
 }
 
-.card-2{
+.card-2 {
    margin-top: 20px;
+   margin-bottom: 50px;
 }
 
-.card-3{
-   margin-top: 30px;
+.card-3 {
+   margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+   .customer-review {
+      grid-template-columns: 1fr;
+      margin: -10px 0 0 10px;
+   }
+
+   .t-card {
+      grid-column: 1;
+   }
+
+   .card-1,
+   .card-2,
+   .card-3 {
+      margin: 9px;
+   }
+
 }
